@@ -22,10 +22,15 @@ any of these files.
 
 ## Install / test per ecosystem
 
+These use the published GitHub repo (`infosoftas/info-subscription-ai`)
+directly — no local clone needed. See
+[Developing this plugin locally](#developing-this-plugin-locally) below if
+you're editing the plugin itself and need to test uncommitted changes.
+
 ### ChatGPT / Codex (Agent Plugins, via `.agents/plugins/marketplace.json`)
 
 ```bash
-codex plugin marketplace add "C:\Temp\info-subscription-ai"
+codex plugin marketplace add infosoftas/info-subscription-ai
 codex plugin marketplace list
 ```
 Then restart the ChatGPT desktop app, open the Plugins Directory, pick the
@@ -38,14 +43,14 @@ for the Developer Mode connector flow instead (paste the MCP URL directly).
 ### GitHub Copilot CLI (via `.github/plugin/marketplace.json`)
 
 ```powershell
-copilot plugin marketplace add "C:\Temp\info-subscription-ai"
+copilot plugin marketplace add infosoftas/info-subscription-ai
 copilot plugin install info-subscription@info-subscription-ai
 ```
 
 ### Claude Code (via `.claude-plugin/marketplace.json`)
 
 ```
-/plugin marketplace add C:\Temp\info-subscription-ai
+/plugin marketplace add infosoftas/info-subscription-ai
 /plugin install info-subscription@info-subscription-ai
 ```
 If the install summary says `Run /reload-plugins to activate.`, run that.
@@ -67,6 +72,37 @@ claude mcp add --transport http --client-id 09ddd06c-dd1b-4782-8716-820ce6077e41
   --callback-port 7777 info-subscription https://mcp.info-subscription.com
 claude mcp login info-subscription
 ```
+
+## Developing this plugin locally
+
+If you're changing files in this plugin (or a marketplace catalog) and want
+to test before pushing, point each tool at your local clone instead of the
+GitHub repo:
+
+```bash
+git clone https://github.com/infosoftas/info-subscription-ai.git
+cd info-subscription-ai
+```
+
+```bash
+# ChatGPT / Codex
+codex plugin marketplace add /path/to/cloned/repository
+codex plugin marketplace list
+
+# GitHub Copilot CLI
+copilot plugin marketplace add /path/to/cloned/repository
+copilot plugin install info-subscription@info-subscription-ai
+
+# Claude Code
+/plugin marketplace add /path/to/cloned/repository
+/plugin install info-subscription@info-subscription-ai
+```
+
+On Windows, use the full path in quotes, e.g. `"C:\code\info-subscription-ai"`.
+
+After editing a manifest, re-run the ecosystem's `marketplace update`/
+`marketplace upgrade` command (see [Updating](#updating) below) — most tools
+don't auto-detect local file changes.
 
 ## Updating
 
