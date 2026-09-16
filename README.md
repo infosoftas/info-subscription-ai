@@ -64,3 +64,18 @@ a vendor's built-in directory, submit separately:
 - When adding a second plugin, create `plugins/<new-plugin>/` following the
   same pattern as `plugins/info-subscription/`, then add an entry to each of
   the three root `marketplace.json` files.
+
+## Contributing
+
+This is a public repository — contributions (new plugins, marketplace
+entries, skills, instructions, fixes) are welcome. See
+[CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines. All commits must include
+a `Signed-off-by` line (Developer Certificate of Origin — `git commit -s`).
+
+## License
+
+Licensed under the [MIT License](./LICENSE). This covers the
+packaging/integration content in this repo (manifests, marketplace catalogs,
+docs, skills, instructions) — it doesn't grant any rights to the underlying
+INFO-Subscription service or MCP server, which remain subject to Infosoft's
+own terms.
