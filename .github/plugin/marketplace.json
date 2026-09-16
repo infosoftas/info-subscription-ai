@@ -1,0 +1,19 @@
+{
+  "name": "info-subscription-ai",
+  "owner": {
+    "name": "Infosoft",
+    "email": "plugins@info-subscription.com"
+  },
+  "metadata": {
+    "description": "INFO-Subscription plugins for GitHub Copilot CLI",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "info-subscription",
+      "description": "Query subscriptions, billing, orders, subscribers and catalogue data from INFO-Subscription.",
+      "version": "1.0.0",
+      "source": "./plugins/info-subscription"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "info-subscription-ai",
+  "plugins": [
+    {
+      "name": "info-subscription",
+      "source": {
+        "source": "local",
+        "path": "./plugins/info-subscription"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "interface": {
+        "displayName": "INFO-Subscription"
+      }
+    }
+  ]
+}

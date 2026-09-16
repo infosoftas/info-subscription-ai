@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "info-subscription",
+  "version": "1.0.0",
+  "description": "Query subscriptions, billing, orders, subscribers and catalogue data from INFO-Subscription.",
+  "homepage": "https://docs.info-subscription.com/en/latest/general/mcp-server.html",
+  "keywords": ["subscriptions", "billing", "orders", "subscribers", "catalogue", "infosoft"],
+  "extensions": {
+    "com.openai": {
+      "presentation": {
+        "name": "INFO-Subscription",
+        "description": "Query subscriptions, billing, orders, subscribers and catalogue data from INFO-Subscription.",
+        "color": "#2564CF"
+      },
+      "registeredMcpServers": [
+        {
+          "name": "info-subscription"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "info-subscription",
+  "description": "Query subscriptions, billing, orders, subscribers and catalogue data from INFO-Subscription.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Infosoft",
+    "email": "plugins@info-subscription.com",
+    "url": "https://docs.info-subscription.com/en/latest/general/mcp-server.html"
+  },
+  "homepage": "https://docs.info-subscription.com/en/latest/general/mcp-server.html",
+  "license": "Proprietary",
+  "keywords": ["subscriptions", "billing", "orders", "subscribers", "catalogue", "infosoft"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "info-subscription-ai",
+  "owner": {
+    "name": "Infosoft",
+    "email": "plugins@info-subscription.com"
+  },
+  "plugins": [
+    {
+      "name": "info-subscription",
+      "source": "./plugins/info-subscription",
+      "description": "Query subscriptions, billing, orders, subscribers and catalogue data from INFO-Subscription."
+    }
+  ]
+}

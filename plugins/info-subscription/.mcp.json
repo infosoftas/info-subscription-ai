@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "info-subscription": {
+      "type": "http",
+      "url": "https://mcp.info-subscription.com"
+    }
+  }
+}
