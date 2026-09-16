@@ -50,6 +50,24 @@ copilot plugin install info-subscription@info-subscription-ai
 ```
 If the install summary says `Run /reload-plugins to activate.`, run that.
 
+The plugin's `.mcp.json` bundles a public, pre-registered OAuth client ID
+(`09ddd06c-dd1b-4782-8716-820ce6077e41`, also published at
+[docs.info-subscription.com](https://docs.info-subscription.com/en/latest/general/mcp-server.html))
+plus a fixed `callbackPort` (`7777`, matching the `http://localhost:7777/callback`
+redirect URI registered with the identity provider). This is required —
+without it, Claude Code falls back to Dynamic Client Registration (RFC 7591),
+which Azure AD B2C doesn't support, and the server shows as
+`Incompatible auth server: does not support dynamic client registration`.
+
+If you're adding the server manually (outside the plugin) instead of through
+`/plugin install`, use:
+
+```
+claude mcp add --transport http --client-id 09ddd06c-dd1b-4782-8716-820ce6077e41 \
+  --callback-port 7777 info-subscription https://mcp.info-subscription.com
+claude mcp login info-subscription
+```
+
 ## Updating
 
 Bump `version` in `plugin.json` and `.claude-plugin/plugin.json` (and in the

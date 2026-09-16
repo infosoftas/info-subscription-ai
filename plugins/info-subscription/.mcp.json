@@ -2,7 +2,11 @@
   "mcpServers": {
     "info-subscription": {
       "type": "http",
-      "url": "https://mcp.info-subscription.com"
+      "url": "https://mcp.info-subscription.com",
+      "oauth": {
+        "clientId": "09ddd06c-dd1b-4782-8716-820ce6077e41",
+        "callbackPort": 7777
+      }
     }
   }
 }
