@@ -27,6 +27,25 @@ them resolve plugin `source` paths relative to this same repo root — so they
 all point at the one shared `plugins/info-subscription/` folder. No content
 is duplicated purely for packaging reasons.
 
+## One-click install
+
+These deep links pre-fill the MCP connection or plugin install for editors
+and apps that support custom URI schemes. If a link doesn't render or open in
+your browser/renderer, use the CLI fallback commands in
+[Quick install](#quick-install) below.
+
+| Ecosystem | Add marketplace | Install plugin |
+|---|---|---|
+| VS Code | — | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_MCP-007ACC?logo=visualstudiocode&logoColor=white)](vscode:mcp/install?%7B%22name%22%3A%22INFO%20Subscription%20MCP%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.info-subscription.com%22%2C%22type%22%3A%22http%22%7D) |
+| Cursor | — | [![Install in Cursor](https://img.shields.io/badge/Cursor-Install_MCP-000000?logo=cursor&logoColor=white)](cursor://anysphere.cursor-deeplink/mcp/install?name=INFO%20Subscription%20MCP&config=eyJ1cmwiOiJodHRwczovL21jcC5pbmZvLXN1YnNjcmlwdGlvbi5jb20iLCJkZXNjcmlwdGlvbiI6IklORk8gU3Vic2NyaXB0aW9uIE1DUCBTZXJ2ZXIifQ%3D%3D) |
+| GitHub Copilot App | [![Add GitHub Copilot Marketplace](https://img.shields.io/badge/GitHub_Copilot-Add_Marketplace-24292E?logo=github&logoColor=white)](https://github.com/copilot/app/launch?open=ghapp%3A%2F%2Fplugins%2Fmarketplace%2Fadd%3Fsource%3Dinfosoftas%252Finfo-subscription-ai) | [![Install GitHub Copilot Plugin](https://img.shields.io/badge/GitHub_Copilot-Install_Plugin-24292E?logo=github&logoColor=white)](https://github.com/copilot/app/launch?open=ghapp%3A%2F%2Fplugins%2Finstall%3Fsource%3Dinfo-subscription%2540info-subscription-ai) |
+
+> **Note:** For GitHub Copilot App, use "Add marketplace" first if "Install
+> plugin" fails because the marketplace isn't registered yet. Many GitHub
+> renderers don't allow custom URI schemes (`vscode:`,
+> `cursor:`), and some browsers block them. Use the CLI instructions below as
+> a reliable fallback.
+
 ## Quick install
 
 | Ecosystem | Add marketplace | Install plugin |
